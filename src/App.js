@@ -21,7 +21,11 @@ decrement = () => {
     count: this.state.count - 1,
   })
 }
-
+reset = () => {
+  this.setState ({
+    count: this.state.count=0,
+  })
+}
 
   render(){
     return (
@@ -31,7 +35,7 @@ decrement = () => {
         <h1>{this.state.count}</h1> {/*anytime the count changes, it appears here  */}
         <button type="button" onClick={this.increment}>Increment</button>
         <button type="button" onClick={this.decrement}>Decrement</button>
-        {/*<button type="button" onClick={this.decrement}>Restart</button> */}
+        <button type="button" onClick={this.reset}>Restart</button>
         </div>
       </div>
     )
